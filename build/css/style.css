@@ -551,6 +551,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
@@ -614,16 +618,16 @@ video {
   width: 2rem;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .w-1\/2 {
   width: 50%;
 }
 
 .w-2\/3 {
   width: 66.666667%;
-}
-
-.w-full {
-  width: 100%;
 }
 
 .w-48 {
@@ -640,6 +644,43 @@ video {
 
 .max-w-4xl {
   max-width: 56rem;
+}
+
+.origin-top {
+  transform-origin: top;
+}
+
+@-webkit-keyframes open-menu {
+  0% {
+    transform: scaleY(0);
+  }
+
+  80% {
+    transform: scaleY(1.2);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes open-menu {
+  0% {
+    transform: scaleY(0);
+  }
+
+  80% {
+    transform: scaleY(1.2);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-open-menu {
+  -webkit-animation: open-menu 0.5s ease-in-out forwards;
+          animation: open-menu 0.5s ease-in-out forwards;
 }
 
 .scroll-mt-52 {
@@ -700,6 +741,10 @@ video {
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.self-end {
+  align-self: flex-end;
+}
+
 .rounded-3xl {
   border-radius: 1.5rem;
 }
@@ -753,6 +798,11 @@ video {
   padding: 0.75rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -796,6 +846,11 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-4xl {
@@ -988,6 +1043,17 @@ video {
   outline-offset: 2px;
 }
 
+.focus\:ring-2:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-sky-400:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(56 189 248 / var(--tw-ring-opacity));
+}
+
 .active\:bg-sky-500:active {
   --tw-bg-opacity: 1;
   background-color: rgb(14 165 233 / var(--tw-bg-opacity));
@@ -1083,8 +1149,16 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 }
 
